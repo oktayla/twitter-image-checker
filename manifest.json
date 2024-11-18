@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "AWS Rekognition Face Analyzer",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "https://*.twitter.com/*"
+  ],
+  "content_scripts": [{
+    "matches": ["https://*.twitter.com/*"],
+    "js": ["aws-sdk.min.js", "config.js", "content.js"]
+  }],
+  "host_permissions": [
+    "https://*.twitter.com/*"
+  ]
+}
