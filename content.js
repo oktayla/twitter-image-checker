@@ -46,15 +46,6 @@
     }
   }
 
-  function getBase64FromImage(img) {
-    const canvas = document.createElement('canvas');
-    canvas.width = img.naturalWidth;
-    canvas.height = img.naturalHeight;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(img, 0, 0);
-    return canvas.toDataURL('image/jpeg');
-  }
-
   async function getBase64FromUrl(url) {
     try {
       const response = await fetch(url);
